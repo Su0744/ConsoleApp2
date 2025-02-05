@@ -4,13 +4,12 @@
     {
         static void Main(string[] args)
         {
-            Player player = new Mage();
-            Monster monster = new Slime();
+            Game game = new Game(); // Game 클래스 선언 및 초기화
 
-            int damage = player.GetAttack(); // player의 공격력을 damage 필드에 넣기
-            monster.OnDamage(damage); // 해당 몬스터의 데미지를 입는 코드(damage는 플레이어의 공격력)
-
-            Console.ReadKey();
+            while (true)  // 반복하기위한 반복문
+            {
+                game.Prosess(); // Game에 있는 전역메서드 Prosess 가져오기
+            }
         }
     }
 }
